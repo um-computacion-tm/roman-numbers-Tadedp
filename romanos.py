@@ -1,49 +1,48 @@
 import unittest
 
 def decimal_to_roman(decimal):
+    #Cadena que contendrá al número romano final
     resultado = ""
-    
-    if decimal <= 0:
+
+    #Verificación de la validez del número   
+    if decimal <= 0 or decimal > 1000:
         return ""
     
-    elif decimal == 1000:
-        return 'M'
-    
-    else:    
-        if decimal < 10:
-            resultado = convert(decimal,0) 
-        elif decimal < 100 and decimal >= 10:
-            resultado = convert(decimal%10,0)
-            resultado = convert(decimal//10,1) + resultado
-        else:
-            resultado = convert((decimal%100)%10,0)
-            resultado = convert((decimal%100)//10,1) + resultado
-            resultado = convert(decimal//100,2) + resultado
-    
+    else:
+        #Cada iteración transforma una cifra del número de derecha a izquierda
+        for i in range(0,4):
+            if decimal >= 10**i:
+                resultado = convertirDecimal((decimal % 10**(i+1)) // 10**i, i) + resultado 
+            else:
+                break
+                
     return resultado
         
- 
-def convert(decimal, decimalPart):
-    decimalPart = decimalPart * 2  
-    datos = ['I','V','X','L','C','D','M']
-    
+#Recibe una cifra y su posición en el número original
+#Devuelve el número romano correspondiente a la cifra
+def convertirDecimal(decimal, puntero):
+    #Ajuste de la variable así apunta a los valores del vector acordes a la posición de la cifra 
+    puntero = puntero * 2  
+    romanos = ['I','V','X','L','C','D','M']
+
+    #Salida del número romano   
     if decimal == 0:
         return ""  
     
     elif decimal <= 3:
-        return datos[decimalPart] * decimal
+        return romanos[puntero] * decimal
     
     elif decimal == 4:
-        return datos[decimalPart] + datos[decimalPart + 1]
+        return romanos[puntero] + romanos[puntero + 1]
     
     elif decimal == 5:
-        return datos[decimalPart + 1]
+        return romanos[puntero + 1]
     
     elif decimal <= 8:
-        return datos[decimalPart + 1] + datos[decimalPart] * (decimal - 5)       
+        return romanos[puntero + 1] + (romanos[puntero] * (decimal - 5))       
     
-    elif decimal == 9:
-        return datos[decimalPart] + datos[decimalPart + 2]    
+    else:
+        return romanos[puntero] + romanos[puntero + 2]    
 
 class TestDecimalToRoman(unittest.TestCase):
     def test_1(self):
