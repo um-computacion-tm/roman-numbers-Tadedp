@@ -44,5 +44,3 @@ def convertirDecimal(decimal, puntero):
         
 if __name__ == '__main__':
     pass
-    
-        
