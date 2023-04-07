@@ -4,323 +4,326 @@ from decimalToRoman import decimalToRoman
 
 class TestDecimalToRoman(unittest.TestCase):
     
+    #Test romanos a decimales.
     def test_I(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('I')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 1)
     
     def test_II(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('II')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 2)
     
     def test_IV(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('IV')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 4)
     
     def test_V(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('V')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 5)
     
     def test_VIII(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('VIII')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 8)
     
     def test_IX(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('IX')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 9)
     
     def test_X(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('X')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 10)
     
     def test_XXV(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('XXV')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 25)
     
     def test_XLVIII(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('XLVIII')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 48)
     
     def test_L(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('L')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 50)
     
     def test_LXXXVII(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('LXXXVII')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 87)        
     
     def test_C(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('C')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 100)
     
     def test_CCXXI(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('CCXXI')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 221)
     
     def test_D(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('D')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 500)
     
     def test_DCLIV(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('DCLIV')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 654)
     
     def test_CMXCIX(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('CMXCIX')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 999)
     
     def test_M(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = romanToDecimal('M')
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 1000)
+        
+    #Tests decimales a romanos.
     def test_1(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(1)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'I')  
     
     def test_2(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(2)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "II")
         
     def test_4(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(4)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "IV")           
     
     def test_5(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(5)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'V')      
         
     def test_10(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(10)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'X')
         
     def test_25(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(25)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "XXV")   
     
     def test_48(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(48)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "XLVIII")   
         
     def test_50(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(50)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'L') 
     
     def test_87(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(87)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "LXXXVII") 
     
     def test_100(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(100)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'C')
 
     def test_221(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(221)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "CCXXI")
 
     def test_500(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(500)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'D')
         
     def test_654(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(654)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "DCLIV")   
          
     def test_999(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(999)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, "CMXCIX")      
                
     def test_1000(self):
-        #pre condion
+        #Pre-condición:
         ### NO HAY ### 
         
-        #proceso
+        #Proceso:
         resultado = decimalToRoman(1000)
         
-        #verificacion
+        #Verificación:
         self.assertEqual(resultado, 'M')   
         
 if __name__ == '__main__':
