@@ -3,7 +3,6 @@ from romanToDecimal import romanToDecimal
 from decimalToRoman import decimalToRoman
 
 class TestDecimalToRoman(unittest.TestCase):
-    
     #Test romanos a decimales.
     def test_I(self):
         #Pre-condición:
